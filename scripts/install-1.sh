@@ -4,7 +4,7 @@
 disk_devices=$(lsblk -d -n -o name)
 echo "Here are your hard drives:"
 echo "$disk_devices"
-
+echo -e "\n"
 read -p "Enter the disk you want to install: " disk
 
 # Format the disk
