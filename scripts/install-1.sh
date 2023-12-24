@@ -61,5 +61,6 @@ genfstab -U /mnt >> /mnt/etc/fstab
 clear
 
 echo "👇 Please execute the following command!"
-echo "curl -fsSL https://raw.githubusercontent.com/AaronYES/archinstall/main/scripts/install-2.sh | bash"
+echo -e "\n"
+echo "curl -fsSL https://raw.githubusercontent.com/AaronYES/archinstall/main/scripts/install-2.sh -o install.sh && bash install.sh"
 arch-chroot /mnt
