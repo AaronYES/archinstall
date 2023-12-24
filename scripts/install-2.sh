@@ -23,13 +23,13 @@ echo "127.0.0.1 arch.localdomain arch" >> /etc/hosts
 
 # Add user
 read -p "Enter username: " username
-useradd -m -g users -G wheel -s /bin/bash "$username"
-echo "$username ALL=(ALL) ALL" >> /etc/sudoers.d/$username
+useradd -m -g users -G wheel -s /bin/bash $newuser
+echo "$newuser ALL=(ALL) ALL" >> /etc/sudoers.d/$newuser
 
 # Set password
-read -rsp "Enter $username password: " userpassword
+read -rsp "Enter $newuser password: " userpassword
 echo -e "\n"
-echo "$username:$userpassword" | chpasswd
+echo "$newuser:$userpassword" | chpasswd
 echo -e "\n"
 read -rsp "Enter root password: " rootpassword
 echo -e "\n"
