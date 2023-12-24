@@ -29,7 +29,7 @@ echo "127.0.0.1 arch.localdomain arch" >> /etc/hosts
 
 # Add user
 useradd -m -g users -G wheel -s /bin/bash aaron
-echo "aaron ALL=(ALL) ALL" | tee /etc/sudoers.d/aaron
+echo "aaron ALL=(ALL) ALL" >> /etc/sudoers.d//aaron
 
 # Set password
 read -rsp "Enter aaron password: " userpassword
