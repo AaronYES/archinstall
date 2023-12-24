@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Get the list of block devices
+disk_devices=$(lsblk -d -n -o name)
+echo "Here are your hard drives:"
+echo "$disk_devices"
+
 read -p "Enter the disk you want to install: " disk
 # Modify mkinitcpio
 sed -i 's/^MODULES=()/MODULES=(btrfs)/' /etc/mkinitcpio.conf
