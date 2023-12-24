@@ -60,7 +60,8 @@ sed -i 's/initrd \/initramfs-linux.img/initrd \/initramfs-linux-fallback.img/' /
 clear
 
 echo "👇 Please execute the following command!"
+echo -e "\n"
 echo "exit"
 echo "umount -R /mnt"
-
+echo -e "\n"
 echo "Done! You can reboot now."
