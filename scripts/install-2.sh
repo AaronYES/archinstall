@@ -4,8 +4,9 @@
 disk_devices=$(lsblk -d -n -o name)
 echo "Here are your hard drives:"
 echo "$disk_devices"
-
+echo -e "\n"
 read -p "Enter the disk you want to install: " disk
+
 # Modify mkinitcpio
 sed -i 's/^MODULES=()/MODULES=(btrfs)/' /etc/mkinitcpio.conf
 sed -i 's/\(^HOOKS=.*\)filesystems\(.*$\)/\1encrypt filesystems\2/' /etc/mkinitcpio.conf
