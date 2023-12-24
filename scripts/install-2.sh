@@ -57,7 +57,8 @@ EOF
 cp /boot/loader/entries/arch.conf /boot/loader/entries/arch-fallback.conf
 sed -i 's/initrd \/initramfs-linux.img/initrd \/initramfs-linux-fallback.img/' /boot/loader/entries/arch-fallback.conf
 
-exit
-umount -R /mnt
+echo "👇 Please execute the following command!"
+echo "exit"
+echo "umount -R /mnt"
 
 echo "Done! You can reboot now."
