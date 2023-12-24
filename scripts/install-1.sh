@@ -57,6 +57,9 @@ pacstrap /mnt base base-devel linux linux-firmware btrfs-progs networkmanager op
 
 # Generate fstab
 genfstab -U /mnt >> /mnt/etc/fstab
+
+clear
+
 echo "👇 Please execute the following command!"
 echo "curl -fsSL https://raw.githubusercontent.com/AaronYES/archinstall/main/scripts/install-2.sh | bash"
 arch-chroot /mnt
