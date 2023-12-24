@@ -1,5 +1,6 @@
 #!/bin/bash
 
+read -p "Enter the disk you want to install: " disk
 # Modify mkinitcpio
 sed -i 's/^MODULES=()/MODULES=(btrfs)/' /etc/mkinitcpio.conf
 sed -i 's/\(^HOOKS=.*\)filesystems\(.*$\)/\1encrypt filesystems\2/' /etc/mkinitcpio.conf
@@ -35,8 +36,8 @@ echo -e "\n"
 echo "root:$rootpassword" | chpasswd
 
 # Enable the service
-systemctl enable NetworkManager --now
-systemctl enable sshd --now
+systemctl enable NetworkManager
+systemctl enable sshd
 
 # Systemd Boot
 bootctl --path=/boot install
